@@ -109,6 +109,14 @@ chatbot_rules = {
         'intent': 'motivation'
     },
 
+    # Help
+    r".*\b(help)\b.*": {
+        'response': ("You can ask me about workouts, meals, sleep, and motivation. 🤖\n"
+                     "Try typing: 'workout plan', 'healthy meals', 'sleep tips', or 'motivate me'."),
+        'intent': 'help'
+    },
+
+
     # Polite Closings
     r".*\b(thank you|thanks)\b.*": {
         'response': "You're welcome! 🙌 Keep pushing towards your goals!",
@@ -121,7 +129,7 @@ chatbot_rules = {
 
     # Default
     "default": {
-        'response': "🤔 I'm not sure about that. Try asking about workouts, meals, or sleep.",
+        'response': "🤔 I'm not sure about that. Type 'help' to see what I can do!",
         'intent': 'unknown'
     }
 }
